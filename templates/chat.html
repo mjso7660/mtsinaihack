@@ -25,6 +25,7 @@
             message : user_input
           } )
           $( 'input.message' ).val( '' ).focus()
+	  this.reset();
         } )
       } )
       socket.on( 'my response', function( msg ) {
