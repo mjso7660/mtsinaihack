@@ -19,7 +19,6 @@
           data: 'User Connected'
         } )
         var form = $( 'form' ).on( 'submit', function( e ) {
-	  console.log("TEST")
           e.preventDefault()
           let user_input = $( 'input.write_msg' ).val()
           socket.emit( 'my event', {
@@ -31,15 +30,12 @@
       socket.on( 'my response', function( msg ) {
 	if(typeof msg.message!=='undefined'){
 	        $( 'div.msg_history').append('<div class="outgoing_msg"><div class="sent_msg"><p>'+msg.message+'</p><span class="time_date"> 11:01 AM    |    June 9</span> </div></div>')
-      console.log("11111111111");
 	}
       })
       socket.on( 'your response', function( msg ) {
 	if(typeof msg.message!=='undefined'){
 	        $( 'div.msg_history').append('<div class="incoming_msg"><div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div><div class="received_msg"><div class="received_withd_msg"><p>'+msg.message+'</p><span class="time_date"> 11:01 AM    |    June 9</span> </div></div></div>')
-      console.log("222222222222");
 	}
-
       })
     </script>
 
@@ -63,51 +59,47 @@
           <div class="inbox_chat">
             <div class="chat_list active_chat">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_img"> <img src="http://2014.igem.org/wiki/images/f/fe/Cooper-Union.png"></div>
                 <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
+                  <h5>MediCooper<span class="chat_date">Dec 25</span></h5>
+		  <p>How can I help you today?</p>
                 </div>
               </div>
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_img"> <img src="https://amp.businessinsider.com/images/5899ffcf6e09a897008b5c04-750-750.jpg"></div>
                 <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
+                  <h5>Jiwoon Park<span class="chat_date">Dec 25</span></h5>
+                  <p>Turner syndrome can cause a variety of medical and developmental problems, including short height, failure of the ovaries to develop and heart defects.</p>
+                    
                 </div>
               </div>
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_img"> <img src="https://www.iti.org.uk/images/article-images/Profile-Interview-Photo---Fiona-Gray.jpg"></div>
                 <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
+                  <h5>Jason Madison<span class="chat_date">Dec 25</span></h5>
+		  <p>Turner syndrome may be diagnosed before birth (prenatally), during infancy or in early childhood. </p>
                 </div>
               </div>
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_img"> <img src="https://www.rd.com/wp-content/uploads/2017/09/03-shutterstock_450728395-F8-studio-1024x683.jpg"></div>
                 <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
+                  <h5>Christine Watkins<span class="chat_date">Dec 25</span></h5>
+		  <p>Clinical signs may vary from person to person (clinical heterogeneity), even within families.</p>
                 </div>
               </div>
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_img"> <img src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg"></div>
                 <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
+                  <h5>Sara Kerry<span class="chat_date">Dec 25</span></h5>
+		  <p>Turner syndrome, a condition that affects only females, results when one of the X chromosomes (sex chromosomes) is missing or partially missing. </p>
                 </div>
               </div>
             </div>
@@ -139,22 +131,9 @@
               <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div> 
               <div class="received_msg"> 
                 <div class="received_withd_msg"> 
-                  <p>Test which is a new approach to have all 
-                    solutions</p> 
+                  <p>What can I help you with?</p>
                   <span class="time_date"> 11:01 AM    |    June 9</span></div> 
               </div> 
-            </div> 
-            <div class="outgoing_msg"> 
-              <div class="sent_msg"> 
-                <p>Test which is a new approach to have all 
-                  solutions</p> 
-                <span class="time_date"> 11:01 AM    |    June 9</span> </div> 
-            </div> 
-	    <div class="outgoing_msg"> 
-              <div class="sent_msg"> 
-                <p>Test which is a new approach to have all 
-                  solutions</p> 
-                <span class="time_date"> 11:01 AM    |    June 9</span> </div> 
             </div> 
 	    <div class="message_holder"> 
             </div> 
