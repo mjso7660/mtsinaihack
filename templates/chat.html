@@ -31,10 +31,13 @@
       socket.on( 'my response', function( msg ) {
 	if(typeof msg.message!=='undefined'){
 	        $( 'div.msg_history').append('<div class="outgoing_msg"><div class="sent_msg"><p>'+msg.message+'</p><span class="time_date"> 11:01 AM    |    June 9</span> </div></div>')
+      console.log("11111111111");
 	}
+      })
       socket.on( 'your response', function( msg ) {
 	if(typeof msg.message!=='undefined'){
-	        $( 'div.msg_history').append('<div class="received_msg"><div class="sent_msg"><p>'+msg.message+'</p><span class="time_date"> 11:01 AM    |    June 9</span> </div></div>')
+	        $( 'div.msg_history').append('<div class="incoming_msg"><div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div><div class="received_msg"><div class="received_withd_msg"><p>'+msg.message+'</p><span class="time_date"> 11:01 AM    |    June 9</span> </div></div></div>')
+      console.log("222222222222");
 	}
 
       })
