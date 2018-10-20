@@ -29,11 +29,14 @@
         } )
       } )
       socket.on( 'my response', function( msg ) {
-        console.log( msg )
 	if(typeof msg.message!=='undefined'){
-//	        $( 'div.message_holder' ).append( '<div>'+msg.message+'</div>' )
 	        $( 'div.msg_history').append('<div class="outgoing_msg"><div class="sent_msg"><p>'+msg.message+'</p><span class="time_date"> 11:01 AM    |    June 9</span> </div></div>')
 	}
+      socket.on( 'your response', function( msg ) {
+	if(typeof msg.message!=='undefined'){
+	        $( 'div.msg_history').append('<div class="received_msg"><div class="sent_msg"><p>'+msg.message+'</p><span class="time_date"> 11:01 AM    |    June 9</span> </div></div>')
+	}
+
       })
     </script>
 
