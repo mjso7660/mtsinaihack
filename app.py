@@ -9,6 +9,14 @@ socketio = SocketIO(app)
 def sessions():
     return render_template('chat.html')
 
+@app.route('/demo1')
+def sessions1():
+    return render_template('chat1.html')
+
+@app.route('/demo2')
+def sessions2():
+    return render_template('chat2.html')
+
 def messageReceived(methods=['GET', 'POST']):
     print('message was received!!!')
 
