@@ -30,12 +30,13 @@
       } )
       socket.on( 'my response', function( msg ) {
 	if(typeof msg.message!=='undefined'){
-	        $( 'div.msg_history').append('<div class="outgoing_msg"><div class="sent_msg"><p>'+msg.message+'</p><span class="time_date"> 11:01 AM    |    June 9</span> </div></div>')
+          var dt = new Date()
+	        $( 'div.msg_history').append('<div class="outgoing_msg"><div class="sent_msg"><p>'+msg.message+'</p><span class="time_date"> </span> </div></div>')
 	}
       })
       socket.on( 'your response', function( msg ) {
 	if(typeof msg.message!=='undefined'){
-	        $( 'div.msg_history').append('<div class="incoming_msg"><div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div><div class="received_msg"><div class="received_withd_msg"><p>'+msg.message+'</p><span class="time_date"> 11:01 AM    |    June 9</span> </div></div></div>')
+	        $( 'div.msg_history').append('<div class="incoming_msg"><div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div><div class="received_msg"><div class="received_withd_msg"><p>'+msg.message+'</p><span class="time_date"> </span> </div></div></div>')
 	}
       })
     </script>
@@ -62,7 +63,7 @@
               <div class="chat_people">
                 <div class="chat_img"> <img src="http://2014.igem.org/wiki/images/f/fe/Cooper-Union.png"></div>
                 <div class="chat_ib">
-                  <h5>MediCooper<span class="chat_date">Dec 25</span></h5>
+                  <h5>MediCooper<span class="chat_date">Oct 21</span></h5>
 		  <p>How can I help you today?</p>
                 </div>
               </div>
@@ -71,7 +72,7 @@
               <div class="chat_people">
                 <div class="chat_img"> <img src="https://amp.businessinsider.com/images/5899ffcf6e09a897008b5c04-750-750.jpg"></div>
                 <div class="chat_ib">
-                  <h5>Jiwoon Park<span class="chat_date">Dec 25</span></h5>
+                  <h5>Dr. Park<span class="chat_date">Oct 20</span></h5>
                   <p>Turner syndrome can cause a variety of medical and developmental problems, including short height, failure of the ovaries to develop and heart defects.</p>
                     
                 </div>
@@ -79,36 +80,36 @@
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://www.iti.org.uk/images/article-images/Profile-Interview-Photo---Fiona-Gray.jpg"></div>
+                <div class="chat_img"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTyWlY1SRu2M653bjl0x_cgk_NY4xidK9xalcVjaOa6L0F1ttfcA"></div>
                 <div class="chat_ib">
-                  <h5>Jason Madison<span class="chat_date">Dec 25</span></h5>
+                  <h5>Brittle Bone Disease Community<span class="chat_date">Oct 19</span></h5>
 		  <p>Turner syndrome may be diagnosed before birth (prenatally), during infancy or in early childhood. </p>
                 </div>
               </div>
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://www.rd.com/wp-content/uploads/2017/09/03-shutterstock_450728395-F8-studio-1024x683.jpg"></div>
+                <div class="chat_img"> <img src="https://i.stack.imgur.com/rYsym.png"></div>
                 <div class="chat_ib">
-                  <h5>Christine Watkins<span class="chat_date">Dec 25</span></h5>
+                  <h5>Anonymous Blue<span class="chat_date">Oct 18</span></h5>
 		  <p>Clinical signs may vary from person to person (clinical heterogeneity), even within families.</p>
                 </div>
               </div>
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg"></div>
+                <div class="chat_img"> <img src="https://avatars1.githubusercontent.com/u/540587?s=88&v=4"></div>
                 <div class="chat_ib">
-                  <h5>Sara Kerry<span class="chat_date">Dec 25</span></h5>
+                  <h5>Anonymous Green<span class="chat_date">Oct 18</span></h5>
 		  <p>Turner syndrome, a condition that affects only females, results when one of the X chromosomes (sex chromosomes) is missing or partially missing. </p>
                 </div>
               </div>
             </div>
             <div class="chat_list">
               <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_img"> <img src="https://avatars3.githubusercontent.com/u/9485711?s=88&v=4" alt="sunil"> </div>
                 <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                  <h5>Anonymous Purple <span class="chat_date">Oct 17</span></h5>
                   <p>Test, which is a new approach to have all solutions 
                     astrology under one roof.</p>
                 </div>
@@ -118,7 +119,7 @@
               <div class="chat_people">
                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                  <h5>Sunil Rajput <span class="chat_date">Oct 16</span></h5>
                   <p>Test, which is a new approach to have all solutions 
                     astrology under one roof.</p>
                 </div>
@@ -129,11 +130,11 @@
       <div class="mesgs"> 
           <div class="msg_history"> 
             <div class="incoming_msg"> 
-              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div> 
+              <div class="incoming_msg_img"> <img src="http://2014.igem.org/wiki/images/f/fe/Cooper-Union.png" alt="sunil"> </div> 
               <div class="received_msg"> 
                 <div class="received_withd_msg"> 
-                  <p>What can I help you with?</p>
-                  <span class="time_date"> 11:01 AM    |    June 9</span></div> 
+                  <p>How can I help you?</p>
+                  <span class="time_date"> </span></div> 
               </div> 
             </div> 
 	    <div class="message_holder"> 
